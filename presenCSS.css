@@ -1,3 +1,7 @@
-#fondo{
+*{
+    font-family: sans-serif;
+}
+
+#fondo, #logo{
     display: none;
 }
