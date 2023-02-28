@@ -5,3 +5,13 @@
 #fondo, #logo{
     display: none;
 }
+
+@font-face {
+    font-family: "blui";
+    src: url("FontsFree-Net-Hello-Headline-W00-Regular.ttf");
+}
+
+h1 {
+    font-family: "blui";
+    color: white;
+}

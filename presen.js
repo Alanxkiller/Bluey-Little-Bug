@@ -1,3 +1,4 @@
+
 function iniciar(){
     var canvas = document.getElementById("lienzo");
     var ctx = canvas.getContext("2d");
@@ -26,3 +27,29 @@ function iniciar(){
 
 
 window.addEventListener('load', iniciar, false);
+
+    let mySound = new sound("");
+    myMusic = new sound("media/intro.mp3");
+    myMusic.play();
+    
+
+
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }    
+}
+
+
+
+
+
