@@ -5,9 +5,9 @@ function iniciar(){
     const fondo= document.getElementById('fondo');
     const logo = document.getElementById('logo');
 
-    ctx.drawImage(fondo, 12,0,1330, 605);
+    ctx.drawImage(fondo, 90, 0, 1200, 805);
     // Pa el logo 
-    ctx.drawImage(logo, canvas.width/4.8, 20, 800, 360)
+    ctx.drawImage(logo, canvas.width/2.55, 120, 295, 290)
     // Cambié el nombre de la fuente ya que parecía que eso era lo que daba problemas
     var f = new FontFace('Font name', 'url(fonts/FontsFree.ttf)');
     f.load().then(function(font){
@@ -15,13 +15,21 @@ function iniciar(){
         console.log("Fuente Cargada");
         // Añadimos la fuente
         document.fonts.add(font);
-        ctx.font = "40px Font name";
+        ctx.font = "27px Font name";
         ctx.fillStyle = "white";
         ctx.textAlign = "center";
-        ctx.fillText("Little Bug", canvas.width/2, 220);
+        ctx.fillText("Bluey Little Bug", canvas.width/2, 275);
+
+        // Título más grande
+        ctx.font = "50px Font name";
+        ctx.fillStyle = "#fff";
+        ctx.textAlign = "center";
+        ctx.fillText("¿Sabes quién es quién?", canvas.width/2, 500)
         
     })
-    // Fuentes.
+
+    ctx.fillStyle = "#2E6104";
+    ctx.fillRect(340, 445, 670, 80);
 }
 
 
