@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mollete en el espacio tiempo</title>
+</head>
+<body>
+
+    <p>Tiempo transcurrido:</p>
+    <span id="minutos"></span>:<span id="segundos"></span>
+    <script>
+        var segs = 0;
+
+        function pad(val) {
+            return val > 9 ? val : "0" + val;
+        }
+        function pad2(val2) {
+            return val2 > 9 ? val2 : "0" + val2;
+        }
+        setInterval(function() {
+            var segundos = pad(++segs % 60);
+            var minutos = pad(parseInt(segs / 60, 10));
+            document.getElementById("segundos").innerHTML = segundos;
+            document.getElementById("minutos").innerHTML = minutos;
+        }, 1000);
+        
+    </script>
+    <!--//////////TIMER END//////////-->
+
+    <!--<input type="hidden" id="segundosPOST" name="segundosPOSTs" value="">
+    <input type="hidden" id="minutosPOST" name="minutosPOSTs" value="">-->
+    
+</body>
+</html>
