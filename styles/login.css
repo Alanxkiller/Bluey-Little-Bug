@@ -27,7 +27,7 @@
 .form-section h1{
     position: absolute;
     top: 40px;
-    left: 64vh;
+    left: 430px;
     text-align: center;
     color: #fff;
     letter-spacing: 2px;
@@ -35,7 +35,7 @@
 
 #player-form{
     top: 150px;
-    left: 61.5vh;
+    left: 410px;
     position: absolute;
     color: #fff;
     display: inline-flex;

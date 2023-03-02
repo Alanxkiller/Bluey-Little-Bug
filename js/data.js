@@ -45,7 +45,7 @@ function verify(name) {
         }
     }
 
-    if (!match) {
+    if (!match) { // En caso de que sea un nuevo jugador
         let newPlayer = JSON.stringify({
             nombre: name,
             puntos: 0,
@@ -55,13 +55,13 @@ function verify(name) {
         playerNames.push(newPlayer);
         localStorage.setItem("playerNames", JSON.stringify(playerNames));
         startScreen(existentPlayer, name);
-    } else {
+    } else { // Y si no
         startScreen(existentPlayer, name);
     }
 
 }       
 
-// 
+// Pantalla para iniciar Juego
 function startScreen(playerName, name){
     form.style.display = "none";
     startGame.style.display = "inline-flex"
@@ -82,7 +82,10 @@ function startScreen(playerName, name){
         </span>
         
         `
-        startGame.append(play);
+        setTimeout(()=>{
+            startGame.append(play);
+
+        }, 2000)
     }else{
         let content = `
             <p>Bienvenid@ de Vuelta</p>
@@ -97,8 +100,10 @@ function startScreen(playerName, name){
         <span class="material-symbols-outlined">
             play_circle
         </span>
-        
         `
-        startGame.append(play);
+
+        setTimeout(()=>{
+            startGame.append(play);
+        }, 2000)
     }
 }
