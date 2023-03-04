@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Drag and Drop</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+    <section id="cajaimagenes">
+      <img id="Bandit" class="imagenes" name="Bandit" src="img/ban(papa).png" />
+      <img id="Chilli" class="imagenes" name="Chilli" src="img/mama.png" />
+      <img id="Bingo" class="imagenes" name="Bingo" src="img/bingo.png" />
+      <img id="Bluey" class="imagenes" name="Bluey" src="img/bluey.png" />
+      <img id="Mollete" class="imagenes" name="Mollete" src="img/mufin.png" />
+      <img id="Pom-Pom" class="imagenes" name="Pom-Pom" src="img/Pom-Pom.png" />
+    </section>
+
+    <!--<canvas id="cPuntaje" width="150" height="50"
+    style="border:1px solid #d3d3d3;">
+    </canvas> --->
+
+  <div class="contenedor">
+
+  <section id="soltar1" class="soltar">
+    <canvas id="Mollete1" name="Bandit" width="180" height="180"></canvas>
+  </section>
+  
+  <section id="soltar2" class="soltar">
+    <canvas id="Mollete2" name="Chilli" width="180" height="180"></canvas>
+  </section>
+
+  <section id="soltar3" class="soltar">
+    <canvas id="Mollete3" name="Bingo" width="180" height="180"></canvas>
+  </section>
+
+  <section id="soltar4" class="soltar">
+    <canvas id="Mollete4" name="Bluey" width="180" height="180"></canvas>
+  </section>
+
+  <section id="soltar5" class="soltar">
+    <canvas id="Mollete5" name="Mollete" width="180" height="180"></canvas>
+  </section>
+
+  <section id="soltar6" class="soltar">
+    <canvas id="Mollete6" name="Pom-Pom" width="180" height="180"></canvas>
+  </section>
+  
+  </div>
+
+  <section id="presentacion">
+    <canvas id="cronometro" width="1920" height="100" style="background-color: black;"></canvas>
+</section>
+
+<span id="minutos"></span><span id="segundos"></span>
+
+<img id="maderita" width="220" height="277"
+src="img/Maderita.png" hidden>
+</body>
+
+</html>

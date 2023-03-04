@@ -1,0 +1,25 @@
+*{
+    font-family: sans-serif;
+}
+
+#fondo, #logo{
+    display: none;
+}
+
+@font-face {
+    font-family: "blui";
+    src: url("FontsFree-Net-Hello-Headline-W00-Regular.ttf");
+}
+
+h1 {
+    font-family: "blui";
+    color: white;
+
+}
+
+#minutos{
+    display: none;
+} 
+#segundos{
+    display: none;
+} 
