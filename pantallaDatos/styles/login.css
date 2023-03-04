@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Bluey';
+    src: url("../fonts/FontsFree.ttf") ;
+}
+
+*{
+    font-family: 'Bluey', sans-serif;
+
+}
+
+#fondo{
+    display: none;
+}
+
+.form-section{
+    position: relative;
+    padding: 0;
+    margin: auto;
+    
+}
+
+.form-section *{
+    padding: 0;
+    margin: 0;
+}
+
+.form-section h1{
+    position: absolute;
+    top: 40px;
+    left: 430px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+#player-form{
+    top: 150px;
+    left: 410px;
+    position: absolute;
+    color: #fff;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    background: #82BCE6;
+    background: linear-gradient(90deg, #82BCE6, #567Dff);
+    border: 4px solid #fff;
+    border-radius: 20px;
+}
+
+#player-form label{
+    font-size: 2.5rem;
+}
+
+#nombre{
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: 4px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+#nombre:focus{
+    border-color: #EAE066;
+    outline: none;
+}
+
+#ingresar{
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 4px solid #fff;
+    color: #fff;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+#ingresar:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #82BCE6;
+}
+
+#start-game{
+    display: none;
+    top: 150px;
+    left: 76vh;
+    position: absolute;
+    color: #fff;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    background: #82BCE6;
+    background: linear-gradient(90deg, #82BCE6, #567Dff);
+    border: 4px solid #fff;
+    border-radius: 20px;
+}
+
+#start-game p{
+    font-size: 1.8rem;
+}
+
+#playBtn{
+    padding: 20px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    transition: all 0.2s;
+    font-size: 2.4rem;
+}
+
+#playBtn:hover{
+    color: #567Dff;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#credits, #table{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+#credits:hover, #table:hover{
+    background-color: #82BCE6;
+    border: 1px solid #000;
+    color: #fff;
+    cursor: pointer;
+}
+

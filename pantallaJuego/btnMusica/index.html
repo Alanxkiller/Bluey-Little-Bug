@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>A</title>
+</head>
+<body>
+	<audio id="myAudio" src="bass.wav"></audio>
+	<img id="toggleButton" src="VolOFF.png" alt="Botón de reproducción">
+	<script>
+		window.onload = function() {
+			var audio = document.getElementById("myAudio");
+			var button = document.getElementById("toggleButton");
+
+			// Reproducir automáticamente la canción después de 2 segundos al entrar 
+			setTimeout(function() {
+				audio.play();
+			}, 2000);
+
+			// Al hacer clic en la imagen, se enciende y apaga la música, tecnología alienigena
+			button.addEventListener("click", function() {
+				if (audio.paused) {
+					audio.play();
+					button.src = "VolOFF.png";
+				} else {
+					audio.pause();
+					button.src = "VolON.png";
+				}
+			});
+
+			// Reproducir sola la canción después de 2 segundos al actualizar la página juasjuasjuas
+			document.addEventListener("DOMContentLoaded", function() {
+				setTimeout(function() {
+					audio.play();
+				}, 2000);
+			});
+		};
+	</script>
+</body>
+</html>

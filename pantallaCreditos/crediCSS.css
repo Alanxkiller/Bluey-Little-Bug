@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "blui";
+    src: url("fonts/FontsFree.ttf");
+}
+*{
+    font-family: 'blui';
+}
+
+#fondo, #logo{
+    display: none;
+}
+
+h1 {
+    font-family: "blui";
+    color: white;
+
+}
+
+#minutos{
+    display: none;
+} 
+#segundos{
+    display: none;
+} 
+
+#volver, #table{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+#volver:hover, #table:hover{
+    background-color: #82BCE6;
+    border: 1px solid #000;
+    color: #fff;
+    cursor: pointer;
+}
