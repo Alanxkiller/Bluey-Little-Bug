@@ -5,7 +5,9 @@ body {
 
 #cajaimagenes {
   align-self: center;
-  width: 850px;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
   height: 200px;
   margin: 10px;
   border: 1px solid #999999;

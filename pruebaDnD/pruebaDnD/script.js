@@ -1,14 +1,34 @@
 var puntos = 0;
+var randoaux = 0;
+let orden = [1, 2, 3, 4, 5, 6];
 
 function iniciar() {
-  var mover = document.querySelector('.Mollete1');
-  mover.style.color = "red";
-
-
+  let rando = orden.sort(function () {
+    return Math.random() - 0.5;
+  });
   var imagenes = document.querySelectorAll("#cajaimagenes > img");
   for (var i = 0; i < imagenes.length; i++) {
     imagenes[i].addEventListener("dragstart", arrastrado, false);
     imagenes[i].addEventListener("dragend", finalizado, false);
+  }
+
+  var images = $(".imagenes");
+  var limit = 6
+  for (var i = 0; i < images.length; i++) {
+    (function (ind) {
+      setTimeout(function () {
+        images.eq(rando[ind]).before(images.eq(i-1));
+        console.log(ind);
+        if (ind === limit) {
+          console.log('It was the last one');
+        }
+      }, 200 + (200 * ind));
+    })(i);
+  }
+
+  
+  for (var i = 0; i < images.length; i++) {
+    
   }
 
   soltar1 = document.getElementById("Mollete1");
@@ -51,11 +71,11 @@ function iniciar() {
 function eventoEnter1(e) {
   console.log(
     "soy el evento dragenter" +
-      e.pageX -
-      soltar1.offsetLeft +
-      "posy " +
-      e.pageY -
-      soltar1.offsetTop
+    e.pageX -
+    soltar1.offsetLeft +
+    "posy " +
+    e.pageY -
+    soltar1.offsetTop
   );
   e.preventDefault();
 }
@@ -141,7 +161,7 @@ function soltado1(e) {
     puntos++;
     console.log("Bien!, llevas: " + puntos + " puntoss");
     elemento.style.visibility = "hidden";
-    lienzo1.drawImage(elemento, posx - 35, posy - 60);
+    lienzo1.drawImage(elemento, posx - 20, posy - 50);
   }
   console.log(id + " en " + getPerrito);
 }
@@ -157,7 +177,7 @@ function soltado2(e) {
     puntos++;
     console.log("Bien!, llevas: " + puntos + " puntoss");
     elemento.style.visibility = "hidden";
-    lienzo2.drawImage(elemento, posx - 35, posy - 60);
+    lienzo2.drawImage(elemento, posx - 20, posy - 50);
   }
   console.log(id + " en " + getPerrito);
 }
@@ -173,7 +193,7 @@ function soltado3(e) {
     puntos++;
     console.log("Bien!, llevas: " + puntos + " puntoss");
     elemento.style.visibility = "hidden";
-    lienzo3.drawImage(elemento, posx - 35, posy - 60);
+    lienzo3.drawImage(elemento, posx - 20, posy - 50);
   }
   console.log(id + " en " + getPerrito);
 }
@@ -188,7 +208,7 @@ function soltado4(e) {
     puntos++;
     console.log("Bien!, llevas: " + puntos + " puntoss");
     elemento.style.visibility = "hidden";
-    lienzo4.drawImage(elemento, posx - 35, posy - 60);
+    lienzo4.drawImage(elemento, posx - 20, posy - 50);
   }
   console.log(id + " en " + getPerrito);
 }
@@ -204,7 +224,7 @@ function soltado5(e) {
     puntos++;
     console.log("Bien!, llevas: " + puntos + " puntoss");
     elemento.style.visibility = "hidden";
-    lienzo5.drawImage(elemento, posx - 35, posy - 60);
+    lienzo5.drawImage(elemento, posx - 20, posy - 50);
   }
   console.log(id + " en " + getPerrito);
 }
@@ -220,7 +240,7 @@ function soltado6(e) {
     puntos++;
     console.log("Bien!, llevas: " + puntos + " puntoss");
     elemento.style.visibility = "hidden";
-    lienzo6.drawImage(elemento, posx - 35, posy - 60);
+    lienzo6.drawImage(elemento, posx - 20, posy - 50);
   }
   console.log(id + " en " + getPerrito);
 }
