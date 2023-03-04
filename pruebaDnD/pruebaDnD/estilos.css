@@ -3,8 +3,24 @@ body {
   flex-direction: column;
 }
 
-#cPuntaje {
+@font-face {
+  font-family: "blui";
+  src: url("fonts/FontsFree-Net-Hello-Headline-W00-Regular.ttf");
 }
+
+h1 {
+  font-family: "blui";
+  color: white;
+
+}
+
+#minutos{
+  display: none;
+} 
+#segundos{
+  display: none;
+} 
+
 
 #cajaimagenes {
   align-self: center;
@@ -13,7 +29,6 @@ body {
   width: 900px;
   height: 200px;
   margin: 10px;
-  border: 1px solid #999999;
 }
 
 .contenedor {
