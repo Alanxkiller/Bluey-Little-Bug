@@ -1,35 +1,20 @@
 var puntos = 0;
-var randoaux = 0;
-let orden = [1, 2, 3, 4, 5, 6];
 
 function iniciar() {
-  let rando = orden.sort(function () {
-    return Math.random() - 0.5;
-  });
   var imagenes = document.querySelectorAll("#cajaimagenes > img");
   for (var i = 0; i < imagenes.length; i++) {
     imagenes[i].addEventListener("dragstart", arrastrado, false);
     imagenes[i].addEventListener("dragend", finalizado, false);
   }
 
-  var images = $(".imagenes");
-  var limit = 6
-  for (var i = 0; i < images.length; i++) {
-    (function (ind) {
-      setTimeout(function () {
-        images.eq(rando[ind]).before(images.eq(i-1));
-        console.log(ind);
-        if (ind === limit) {
-          console.log('It was the last one');
-        }
-      }, 200 + (200 * ind));
-    })(i);
-  }
+  setTimeout(function () {
+    $("#cajaimagenes").html($("#cajaimagenes .imagenes").sort(function () {
+      return Math.random() - 0.5;
+    }));
+    var snd = new Audio("music/Pop.mp3"); // buffers automatically when created
+    snd.play();
+  }, 500);
 
-  
-  for (var i = 0; i < images.length; i++) {
-    
-  }
 
   soltar1 = document.getElementById("Mollete1");
   lienzo1 = soltar1.getContext("2d");
@@ -66,6 +51,12 @@ function iniciar() {
   soltar6.addEventListener("dragenter", eventoEnter6, false);
   soltar6.addEventListener("dragover", eventoOver6, false);
   soltar6.addEventListener("drop", soltado6, false);
+
+  /*cPuntaje = document.getElementById("cPuntaje");
+  ctxPts = cPuntaje.getContext("2d");
+  ctxPts.font = "30px Arial";
+  ctxPts.fillText("Puntos: ",0,30);*/
+
 }
 
 function eventoEnter1(e) {
