@@ -35,6 +35,10 @@ function iniciar(){
     setTimeout(()=>{
         btn.style.display = "inline-block";
     }, 2000)
+
+    let audio = document.getElementById("audio");
+    audio.volume = 0.3;
+    audio.play();
 }
 
 d.addEventListener("DOMContentLoaded", ()=>{
