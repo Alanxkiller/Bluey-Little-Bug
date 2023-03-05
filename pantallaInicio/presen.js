@@ -31,10 +31,10 @@ function iniciar(){
     ctx.fillStyle = "#2E6104";
     ctx.fillRect(340, 445, 670, 80);
 
-    repIntro();
     // para activar el audio
-    // canvas.addEventListener("click", ()=>{
-    // })
+    canvas.addEventListener("click", ()=>{
+    repIntro();
+    })
 }
 
 
